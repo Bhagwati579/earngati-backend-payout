@@ -15,8 +15,8 @@ admin.initializeApp({
   databaseURL: process.env.FIREBASE_DATABASE_URL
 });
 
-app.get('/', (req, res) => {
-  res.send('✅ EarnGati Backend Running');
+app.get('/health', (req, res) => {
+  res.send('EarnGati Backend is running.');
 });
 
 app.post('/verify-admin', (req, res) => {
