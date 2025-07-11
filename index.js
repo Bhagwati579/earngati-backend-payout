@@ -25,18 +25,4 @@ app.get('/health', (req, res) => {
   res.send('EarnGati Backend is running.');
 });
 
-// ✅ Admin Key Verification Route
-app.post('/verify-admin', (req, res) => {
-  const key = req.body.key;
-  if (key === process.env.ADMIN_KEY) {
-    res.json({ success: true });
-  } else {
-    res.status(403).json({ success: false });
-  }
-});
-
-// ✅ Start Server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`✅ Server running on port ${PORT}`);
-});
+// ✅ Admin Key Verification 
